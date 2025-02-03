@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./public/css/styles.css">
+    <title>فروشگاه اینترنتی دیجی کالا</title>
+<style>
+    
+    @font-face{font-family:FigtreeVF;src:url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) 
+    format("woff2 supports variations"),
+    url(chrome-extension://majdfhpaihoncoakbjgbdhglocklcgno/fonts/FigtreeVF.woff2) 
+    format("woff2-variations");font-weight:100 1000;font-display:swap}
+
+
+    .container-login {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 420px;
+    height: 420px;
+    padding: 1rem;
+    border: 1px solid lightgray;
+    border-radius: 0.7rem;
+  }
+  .register__content_form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+    .register__title p {
+      font-size: 0.8rem;
+      color: rgb(147, 147, 147);
+    }
+  
+    form {
+      display: flex;
+      flex-flow: column nowrap;
+      width: 95%;
+      gap: 1.2rem;
+      h2 {
+        font-size: 1rem;
+      }
+      input[type="text"] {
+        position: relative;
+        height: 50px;
+        border-radius: 0.5rem;
+        outline: none;
+        border: 1px solid var(--main-blue);
+        padding: 0 1rem;
+  
+        &:focus {
+          border: 1px solid var(--main-red);
+        }
+        &:focus + label {
+          display: block;
+          opacity: 1;
+          color: var(--main-red);
+          cursor: pointer;
+        }
+      }
+      button {
+        width: 100%;
+        background-color: var(--main-red);
+        color: white;
+        border-radius: 0.5rem;
+        padding: 0.9rem;
+      }
+      label {
+        font-size: 11px;
+        color: #333;
+        display: none;
+        margin-top: -16px;
+        opacity: 0;
+        transition: all 0.4s ease;
+      }
+    }
+  }
+  
+  
+  
+  .register__privacy {
+    font-size: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    gap: 0.3rem;
+  
+    a {
+      text-decoration: none;
+      color: var(--main-blue);
+    }
+  }
+  
+  .register form input::before {
+    content: "این فیلد را خالی نزارید";
+    position: absolute;
+    color: var(--main-red);
+    bottom: 0;
+    right: 0;
+    left: 10%;
+    right: 0;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+  }
+  .slider{
+    width: 100%;
+    height: 380px;
+    
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+  
+    .swiper-slide {
+      position: relative;
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  
+  .slider .swiper-rtl .swiper-button-prev,
+  .swiper-rtl .swiper-button-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border: 1px solid lightgray;
+    border-radius: 60%;
+  
+  }
+  .slider .swiper-rtl .swiper-button-next{
+    position: absolute;
+    right: 9%;
+    top: 85%;
+  }
+  .slider .swiper-rtl .swiper-button-prev{
+    position: absolute;
+    right: 5%;
+    top: 85%;
+  }
+  
+  .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet{
+    /* background-color: black; */
+    opacity: .5;
+    width: 5px;
+    height: 5px;
+  }
+  .swiper-pagination-bullet-active{
+    display: inline-block;
+    opacity: 1 !important;
+    background-color: white !important ;
+    width: 20px !important;
+    border-radius: .5rem !important;
+  }
+
+  .heigh-sell{
+    position: relative;
+    width: 1336px;
+    height: 404px;
+    padding: 15px 5px;
+    border: 1px solid lightgray;
+    border-radius: 1rem;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-inline: auto;    
+}
+
+
+.high-sell-products{
+    .swiper {
+        width: 1325px;
+        height: 280px;
+        margin-top: 28px;
+        padding: 0 2rem;
+      }
+  
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        padding: .4rem;
+        width: 320px !important;
+        background: #fff;
+        display: flex;
+        gap: .5rem;
+        justify-content: center;
+        align-items: start;
+        display: flex;
+        flex-flow: column wrap;
+      }
+      .swiper {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      
+
+}
+
+.swiper-slide .product{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: .6rem}
+
+
+</style>
+</head>
+
+
+
+<body cz-shortcut-listen="true"></body>
+    <div class="container-login">
+        <!-- log in - register  -->
+        <div class="register">
+          <a href="index.html"><img src="images/login-logo.svg" alt=""></a>
+          <div class="register__content_form">
+            <form action="#">
+              <h2>ورود | ثبت‌نام</h2>
+  
+              <div class="register__title">
+                
+                <p> شماره موبایل یا ایمیل خود را وارد کنید</p>
+              </div>
+              <input type="text" id="phone" name="phone" pattern="\d{11}" required="">
+              <label for="phone">این فیلد باید پر شود</label>
+              <button type="submit">ورود</button>
+            </form>
+            <p class="register__privacy">
+              ورود شما به معنای پذیرش<a href="#">شرایط دیجی‌کالا</a>و<a href="#">قوانین حریم‌خصوصی</a>است
+            </p>
+          </div>
+        </div>
+      </div>
+
+<div id="veepn-breach-alert"></div>
+
+    </body>
+    </html>
+

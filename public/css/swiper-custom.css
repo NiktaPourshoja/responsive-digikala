@@ -1,0 +1,240 @@
+/* Custom Swiper styles */
+.swiper .swiper-container .swiper-container2,
+.swiper-container3 {
+  position: relative !important;
+}
+.swiper2-button-next,
+.swiper2-button-prev,
+.swiper-button-next3,
+.swiper-button-prev3 {
+  position: absolute !important;
+  background-color: white !important;
+  z-index: 20;
+  border: 1px solid rgb(179, 179, 179)  ;
+  width: 35px !important;
+  height: 35px !important;
+  border-radius: 9999px !important;
+  /* display: flex !important; */
+  align-items: center !important;
+  justify-content: center !important;
+  top: auto !important;
+  bottom: 35px !important;
+  transition: all 0.2s ease;
+}
+
+.swiper-button-next_hot{
+  left: 20px !important;
+}
+.swiper-button-prev_hot{
+  right: 20px !important;
+
+}
+.swiper-button-next_hot,
+.swiper-button-prev_hot{
+  background-color: white !important;
+  width: 35px !important;
+  height: 35px !important;
+  border: 1px solid rgb(194, 194, 194) !important;
+  border-radius: 50%;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after,
+.swiper-button-next_hot::after,
+.swiper-button-prev_hot::after{
+  color: rgb(151, 151, 151) !important; 
+  font: bold;
+}
+
+.swiper1-button-next,
+.swiper1-button-prev {
+  position: absolute !important;
+  background-color: black !important;
+  visibility: hidden !important;
+  opacity: 0;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 9999px !important;
+  bottom: 0 !important;
+  /* display: flex !important; */
+  align-items: center !important;
+  justify-content: center !important;
+  top: auto !important;
+  bottom: 35px !important;
+  transition: all 0.2s ease;
+}
+.swiper-container:hover .swiper1-button-next,
+.swiper-container:hover .swiper1-button-prev {
+  visibility: visible !important ;
+  opacity: 1;
+}
+
+/* Mobile styles (default) */
+@media screen and (max-width: 767px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 25px !important;
+    height: 25px !important;
+    bottom: 10px !important;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 10px !important;
+  }
+}
+
+/* Desktop styles */
+@media screen and (min-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 40px !important;
+    height: 40px !important;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after,
+  .swiper-button-next-city::after,
+  .swiper-button-prev-city::after {
+    font-size: 18px !important;
+  }
+
+  .swiper-button-next-city::after
+  .swiper-button-prev-city::after {
+    color: #ffffff !important;
+  }
+  .swiper1-button-prev {
+    right: 20px !important;
+    left: auto !important;
+  }
+}
+
+.swiper1-button-prev {
+  right: 30px !important;
+  /* left: auto !important; */
+}
+
+.swiper1-button-next {
+  right: 75px !important;
+  /* right: auto !important; */
+}
+
+.swiper2-button-prev,
+.swiper-button-prev3 {
+  right: 10px !important;
+  bottom: 80px !important;
+  left: auto !important;
+}
+
+.swiper2-button-next,
+.swiper-button-next3 {
+  left: 10px !important;
+  right: auto !important;
+}
+
+.swiper1-button-next::after,
+.swiper1-button-prev::after {
+  color: rgb(39, 38, 38) !important;
+}
+
+.swiper-pagination {
+  bottom: 15px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 6px !important;
+  height: 6px !important;
+  background-color: #ffffff !important;
+  opacity: 0.5 !important;
+  margin: 0 4px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #c52222 !important;
+  width: 10px !important;
+  height: 5px !important;
+  border-radius: 30% !important;
+  opacity: 1 !important;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 767px) {
+  .swiper-pagination-bullet {
+    width: 4px !important;
+    height: 4px !important;
+    margin: 0 3px !important;
+  }
+}
+
+.header_content_second .nav-item {
+  position: relative;
+}
+
+.header_content_second .nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: -16px; /* Adjust to align with header's border */
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #d32f2f; /* Your hover color */
+  transition: width 0.3s ease;
+}
+
+.header_content_second .nav-item:hover::after {
+  width: 100%; /* Expand underline on hover */
+}
+
+.repeated-city-swiper {
+  position: relative !important;
+  width: 100% !important; /* Ensure it takes full width */
+  max-width: 600px !important; /* Optional, adjust based on design */
+  margin: 0 auto !important; /* Center the Swiper */
+}
+
+.swiper-button-next-city,
+.swiper-button-prev-city,
+.swiper-button-next,
+.swiper-button-prev{
+  position: absolute !important;
+  color: rgb(102, 102, 102) !important;
+  top: 65% !important;
+  width: 35px !important;
+  height: 35px !important;
+  border: 1px solid rgb(167, 167, 167);
+  background-color: white !important;
+  border-radius: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+}
+
+.swiper-button-next-city,
+.swiper-button-next5 , 
+.swiper-button-next6,
+.swiper-button-prev6 {
+  left: 10px !important;
+  bottom: 40% !important;
+}
+.swiper-button-next5 ,
+.swiper-button-prev5{
+  position: absolute !important;
+  color: rgb(102, 102, 102) !important;
+  top: 65% !important;
+  width: 35px !important;
+  height: 35px !important;
+  border: 1px solid rgb(167, 167, 167);
+  background-color: white !important;
+  border-radius: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: 10 !important;
+
+}
+
+.swiper-button-prev-city,
+.swiper-button-prev5,
+.swiper-button-prev6 {
+  right: 10px !important;
+}
+.swiper2-button-next,
+.swiper2-button-prev{
+  bottom: 90% !important;
+}
